@@ -1,7 +1,7 @@
 /* ==========================================================
    Scentimental — "A Scent for Every Story"
-   Palette
-     light brown   #F1DAC4
+  color pallete subject to change
+   light brown   #F1DAC4
      medium brown  #8F7663
      gold          #D9AF3B
      plum (logo)   #6B335A
@@ -9,7 +9,7 @@
    Type (matched to the logo)
      script   Pinyon Script   – the "Scentimental" wordmark
      caps     Cinzel          – the "A SCENT FOR EVERY STORY" tagline
-     text     Cormorant Garamond
+     text     Cormorant Garamond ???
    ========================================================== */
 
 :root {
@@ -957,4 +957,203 @@ a { color: inherit; }
 @media (max-width: 600px) {
   .announce .sep,
   .announce .where { display: none; }
+}
+
+/* scent bundle options */
+.bundle-options{
+  margin-top: 1.2rem;
+  width: 100%;
+}
+
+.bundle-heading{
+  font-family: var(--caps);
+  font-size: .68rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin: 0 0 .8rem;
+}
+
+.bundle-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: .55rem;
+}
+
+.bundle-option{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .15rem;
+  min-height: 58px;
+  padding: .55rem .3rem;
+  border: 1px solid rgba(107,51,90,.3);
+  background: transparent;
+  text-decoration: none;
+  color: var(--plum);
+  transition: all .25s ease;
+}
+
+.bundle-option span{
+  font-family: var(--caps);
+  font-size: .62rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.bundle-option strong{
+  font-family: var(--text);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gold-deep);
+}
+
+.bundle-option:hover{
+  background: var(--plum);
+  border-color: var(--plum);
+  color: var(--sand);
+  transform: translateY(-2px);
+}
+
+.bundle-option:hover strong{
+  color: var(--gold);
+}
+
+/* custom scent styling */
+.custom-scent{
+  margin-top: 6rem;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: radial-gradient(ellipse at 90% 10%, rgba(164,103,135,.2), transparent 55%), var(--sand-soft);
+  border: 1px solid rgba(169, 131, 31, .5);
+  outline: 1px solid rgba(169, 131, 31, .2);
+  outline-offset: 6px;
+  text-align: center;
+}
+
+.custom-scent-copy{
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+}
+
+.custom-scent h2{
+  font-family: var(--script);
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--plum);
+  margin: 0 0 .8rem;
+}
+
+.custom-scent-copy p{
+  color: var(--umber);
+  font-style: italic;
+  margin: 0;
+}
+
+.custom-bundles{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.custom-option{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+  padding: 1.4rem .8rem;
+  background: var(--paper);
+  border: 1px solid rgba(107,51,90,.4);
+  color: var(--plum);
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.custom-option span{
+  font-family: var(--caps);
+  font-size: .8rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.custom-option strong{
+  font-family: var(--text);
+  font-size: 1.4rem;
+  color: var(--gold-deep);
+}
+
+.custom-option:hover{
+  background: var(--plum);
+  color: var(--sand);
+  border-color: var(--plum);
+  transform: translateY(-3px);
+}
+
+.custom-option:hover strong{
+  color: var(--gold);
+}
+
+.subscription{
+  max-width: 850px;
+  margin: 2.5rem auto 0;
+  padding: 2rem;
+  border-top: 1px solid rgba(169,131,31,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  text-align: left;
+}
+
+.subscription h3{
+  font-family: var(--caps);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  color: var(--plum);
+  margin: 0;
+}
+
+.subscription p{
+  font-style: italic;
+  color: var(--umber);
+  margin: .3rem 0 0;
+}
+
+.subscription-option{
+  min-width: 200px;
+}
+
+@media (max-width: 600px) {
+  .bundle-grid{
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .bundle-option{
+    min-height: 55px;
+  }
+
+  .bundle-option span{
+    font-size: .57rem;
+  }
+
+  .custom-bundles{
+    grid-template-columns: 1fr;
+  }
+  .subscription{
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 2rem 0 0;
+  }
+  .subscription-option{
+    min-width:0;
+  }
+  .custom-scent{
+    margin-top: 4rem;
+  }
 }
