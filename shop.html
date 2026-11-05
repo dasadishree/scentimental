@@ -1,7 +1,5 @@
-<!-- edit this part to have buttons for SIGNATURE large 3 pack, large 5 pack, large 10 pack , medium 3, medium 5, medium 10, small 3, small 5, small 10 -->
-<!-- edit this part to have buttons for SEASONAL large 3 pack, large 5 pack, large 10 pack , medium 3, medium 5, medium 10, small 3, small 5, small 10 -->
-<!-- and have the prices listed for each buy option -->
-
+<!-- fix prices and links -->
+<!-- facebook and tijtok link get it from amrit/samaira -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,12 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shop | Scentimental</title>
   <meta name="description" content="Shop Scentimental's hand-poured soy candles and gift sets.">
+
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <header class="site-header">
@@ -22,13 +22,20 @@
       <a class="brand" href="index.html" aria-label="Scentimental home">
         <img src="assets/logo-wordmark.png" alt="Scentimental — A Scent for Every Story">
       </a>
+
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
+
       <nav class="nav" id="site-nav" aria-label="Main">
-        <ul><li><a href="shop.html" aria-current="page">Shop</a></li><li><a href="team.html">Our Team</a></li><li><a href="newsletter.html">Newsletter</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <ul>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="contact.html">Contact</a></li></ul>
       </nav>
     </div>
+
     <div class="smoke" aria-hidden="true">
       <svg viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
         <defs>
@@ -38,8 +45,14 @@
             <feGaussianBlur stdDeviation="7"/>
           </filter>
         </defs>
-        <g filter="url(#smokeA)"><path d="M-40 40 C 220 10, 380 90, 620 50 S 1020 10, 1240 60 S 1480 40, 1500 30" stroke="#A46787" stroke-width="26" stroke-opacity="0.38" fill="none" stroke-linecap="round"/><path d="M-40 80 C 160 50, 420 120, 700 85 S 1100 40, 1480 95" stroke="#F1DAC4" stroke-width="34" stroke-opacity="0.55" fill="none" stroke-linecap="round"/><path d="M100 120 C 340 90, 520 150, 820 115 S 1180 90, 1400 130" stroke="#D9AF3B" stroke-width="10" stroke-opacity="0.35" fill="none" stroke-linecap="round"/></g>
-      </svg><svg viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
+        <g filter="url(#smokeA)">
+          <path d="M-40 40 C 220 10, 380 90, 620 50 S 1020 10, 1240 60 S 1480 40, 1500 30" stroke="#A46787" stroke-width="26" stroke-opacity="0.38" fill="none" stroke-linecap="round"/>
+          <path d="M-40 80 C 160 50, 420 120, 700 85 S 1100 40, 1480 95" stroke="#F1DAC4" stroke-width="34" stroke-opacity="0.55" fill="none" stroke-linecap="round"/>
+          <path d="M100 120 C 340 90, 520 150, 820 115 S 1180 90, 1400 130" stroke="#D9AF3B" stroke-width="10" stroke-opacity="0.35" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+      
+      <svg viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <filter id="smokeB" x="-10%" y="-40%" width="120%" height="180%">
             <feTurbulence type="fractalNoise" baseFrequency="0.0045 0.035" numOctaves="3" seed="23"/>
@@ -47,7 +60,10 @@
             <feGaussianBlur stdDeviation="7"/>
           </filter>
         </defs>
-        <g filter="url(#smokeB)"><path d="M-40 60 C 260 100, 500 30, 760 70 S 1160 120, 1500 55" stroke="#6B335A" stroke-width="14" stroke-opacity="0.22" fill="none" stroke-linecap="round"/><path d="M60 105 C 300 140, 600 70, 900 110 S 1260 150, 1480 100" stroke="#A46787" stroke-width="22" stroke-opacity="0.28" fill="none" stroke-linecap="round"/></g>
+        <g filter="url(#smokeB)">
+          <path d="M-40 60 C 260 100, 500 30, 760 70 S 1160 120, 1500 55" stroke="#6B335A" stroke-width="14" stroke-opacity="0.22" fill="none" stroke-linecap="round"/>
+          <path d="M60 105 C 300 140, 600 70, 900 110 S 1260 150, 1480 100" stroke="#A46787" stroke-width="22" stroke-opacity="0.28" fill="none" stroke-linecap="round"/>
+        </g>
       </svg>
     </div>
   </header>
@@ -59,211 +75,88 @@
       <div class="rule"><span></span></div>
     </section>
 
-    <section class="section">
+    <section class="section shop-section">
       <div class="wrap">
-        
-        <div class="products">
-
+      
         <!-- signature scents -->
-        <article class="product reveal" data-cat="signature">
-          <div class="product-photo"><img src="assets/logo-mark.png" alt=""><small>Product photo</small></div>
-          <h3>Midnight Jasmine</h3>
-          <p class="notes">lavender &middot; jasmine</p>
-          <p class="desc">A fresh, floral scent</p>
-          
-          <div class="bundle-options">
-            <p class="bundle-heading">Signature Collection</p>
-            <div class="bundle-grid">
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-3-pack-bundle-003/" class="bundle-option"><span>Large &middot; 3 Pack</span>$60.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-5-pack-bundle-002/" class="bundle-option"><span>Large &middot; 5 Pack</span>$100.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-10-pack-bundle-001/" class="bundle-option"><span>Large &middot; 10 Pack</span>$200.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-3-pack-bundle-009/" class="bundle-option"><span>Medium &middot; 3 Pack</span>$50.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-5-pack-bundle-008/" class="bundle-option"><span>Medium &middot; 5 Pack</span>$80.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-10-pack-bundle-007/" class="bundle-option"><span>Medium &middot; 10 Pack</span>$175.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-3-pack-bundle-015/" class="bundle-option"><span>Small &middot; 3 Pack</span>$45.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-5-pack-bundle-014/" class="bundle-option"><span>Small &middot; 5 Pack</span>$80.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-10-pack-bundle-013/" class="bundle-option"><span>Small &middot; 10 Pack</span>$150.00</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product reveal" data-cat="signature">
-          <div class="product-photo"><img src="assets/logo-mark.png" alt=""><small>Product photo</small></div>
-          <h3>Morning Tide</h3>
-          <p class="notes">sea salt &middot; ocean &middot; citrus &middot; coconut</p>
-          <p class="desc">A soothing, serene, cool aquatic scent</p>
-          <div class="bundle-grid">
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-3-pack-bundle-003/" class="bundle-option"><span>Large &middot; 3 Pack</span>$60.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-5-pack-bundle-002/" class="bundle-option"><span>Large &middot; 5 Pack</span>$100.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-10-pack-bundle-001/" class="bundle-option"><span>Large &middot; 10 Pack</span>$200.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-3-pack-bundle-009/" class="bundle-option"><span>Medium &middot; 3 Pack</span>$50.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-5-pack-bundle-008/" class="bundle-option"><span>Medium &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-10-pack-bundle-007/" class="bundle-option"><span>Medium &middot; 10 Pack</span>$175.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-3-pack-bundle-015/" class="bundle-option"><span>Small &middot; 3 Pack</span>$45.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-5-pack-bundle-014/" class="bundle-option"><span>Small &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-10-pack-bundle-013/" class="bundle-option"><span>Small &middot; 10 Pack</span>$150.00</a>
-          </div>
-        </article>
-
-        <article class="product reveal" data-cat="signature">
-          <div class="product-photo"><img src="assets/logo-mark.png" alt=""><small>Product photo</small></div>
-          <h3>Firewood</h3>
-          <p class="notes">light ask &middot; smoke &middot; sweet hickory wood</p>
-          <p class="desc">A smoky and earthy scent</p>
-          <div class="bundle-grid">
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-3-pack-bundle-003/" class="bundle-option"><span>Large &middot; 3 Pack</span>$60.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-5-pack-bundle-002/" class="bundle-option"><span>Large &middot; 5 Pack</span>$100.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-10-pack-bundle-001/" class="bundle-option"><span>Large &middot; 10 Pack</span>$200.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-3-pack-bundle-009/" class="bundle-option"><span>Medium &middot; 3 Pack</span>$50.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-5-pack-bundle-008/" class="bundle-option"><span>Medium &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-10-pack-bundle-007/" class="bundle-option"><span>Medium &middot; 10 Pack</span>$175.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-3-pack-bundle-015/" class="bundle-option"><span>Small &middot; 3 Pack</span>$45.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-5-pack-bundle-014/" class="bundle-option"><span>Small &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-10-pack-bundle-013/" class="bundle-option"><span>Small &middot; 10 Pack</span>$150.00</a>
-          </div>
-        </article>
-
-        <article class="product reveal" data-cat="signature">
-          <div class="product-photo"><img src="assets/logo-mark.png" alt=""><small>Product photo</small></div>
-          <h3>English Pear</h3>
-          <p class="notes">strawberry &middot; citrus &middot; tropical</p>
-          <p class="desc">A juicy, sweet, fresh scent</p>
-          <div class="bundle-grid">
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-3-pack-bundle-003/" class="bundle-option"><span>Large &middot; 3 Pack</span>$60.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-5-pack-bundle-002/" class="bundle-option"><span>Large &middot; 5 Pack</span>$100.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-10-pack-bundle-001/" class="bundle-option"><span>Large &middot; 10 Pack</span>$200.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-3-pack-bundle-009/" class="bundle-option"><span>Medium &middot; 3 Pack</span>$50.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-5-pack-bundle-008/" class="bundle-option"><span>Medium &middot; 5 Pack</span>$80.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-10-pack-bundle-007/" class="bundle-option"><span>Medium &middot; 10 Pack</span>$175.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-3-pack-bundle-015/" class="bundle-option"><span>Small &middot; 3 Pack</span>$45.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-5-pack-bundle-014/" class="bundle-option"><span>Small &middot; 5 Pack</span>$80.00</a>
-              <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-10-pack-bundle-013/" class="bundle-option"><span>Small &middot; 10 Pack</span>$150.00</a>
-            </div>
-        </article>
+        <section class="shop-collection" aria-labelledby="signature-title">
+          <h2 class="collection-title" id="signature-title">Signature Collection</h2>
+          <div class="collection-products" id="signature-products"></div>
+        </section>
 
         <!-- seasonal scents -->
-        <article class="product reveal" data-cat="seasonal">
-          
-          <div class="product-photo"><span class="tag">FALL</span><img src="assets/logo-mark.png" alt=""><small>Product photo</small></div>
-          <h3>Apple Cider Donut</h3>
-          <p class="notes">honeycrisp apple &middot; warm cider &middot; cinnamon</p>
-          <p class="desc">A crisp, soft, spiced scent</p>
-          <div class="bundle-grid">
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-3-pack-bundle-003/" class="bundle-option"><span>Large &middot; 3 Pack</span>$60.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-5-pack-bundle-002/" class="bundle-option"><span>Large &middot; 5 Pack</span>$100.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-10-pack-bundle-001/" class="bundle-option"><span>Large &middot; 10 Pack</span>$200.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-3-pack-bundle-009/" class="bundle-option"><span>Medium &middot; 3 Pack</span>$50.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-5-pack-bundle-008/" class="bundle-option"><span>Medium &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-10-pack-bundle-007/" class="bundle-option"><span>Medium &middot; 10 Pack</span>$175.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-3-pack-bundle-015/" class="bundle-option"><span>Small &middot; 3 Pack</span>$45.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-5-pack-bundle-014/" class="bundle-option"><span>Small &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-10-pack-bundle-013/" class="bundle-option"><span>Small &middot; 10 Pack</span>$150.00</a>
-          </div>
-        </article>
+        <section class="shop-collection" aria-labelledby="seasonal-title">
+          <h2 class="collection-title" id="seasonal-title">Seasonal Collection</h2>
+          <div class="collection-products" id="seasonal-products"></div>
+        </section>
 
-        <article class="product reveal" data-cat="signature">
-          <div class="product-photo"><span class="tag">WINTER</span><img src="assets/logo-mark.png" alt=""><small>Product photo</small></div>
-          <h3>Grandma's Cookies</h3>
-          <p class="notes">warm chocolate &middot; brown sugar</p>
-          <p class="desc">Warm and buttery</p>
-          <div class="bundle-grid">
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-3-pack-bundle-003/" class="bundle-option"><span>Large &middot; 3 Pack</span>$60.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-5-pack-bundle-002/" class="bundle-option"><span>Large &middot; 5 Pack</span>$100.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-10-pack-bundle-001/" class="bundle-option"><span>Large &middot; 10 Pack</span>$200.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-3-pack-bundle-009/" class="bundle-option"><span>Medium &middot; 3 Pack</span>$50.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-5-pack-bundle-008/" class="bundle-option"><span>Medium &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-10-pack-bundle-007/" class="bundle-option"><span>Medium &middot; 10 Pack</span>$175.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-3-pack-bundle-015/" class="bundle-option"><span>Small &middot; 3 Pack</span>$45.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-5-pack-bundle-014/" class="bundle-option"><span>Small &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-10-pack-bundle-013/" class="bundle-option"><span>Small &middot; 10 Pack</span>$150.00</a>
-          </div>
-        </article>
+        <section class="shop-collection custom-collection" aria-labelledby="custom-title">
+          <h2 class="collection-title" id="custom-title">Customizable Scents</h2>
+          <div class="collection-products custom-products">
+            
+            <article class="custom-product reveal">
+              <div class="custom-product-photo">
+                <img src="assets/logo-mark.png" alt="Customizable scent 10 pack">
+              </div>
+              <h3>10 Pack Custom Scent</h3>
+              <p>Turn any scent into a custom scent pack for gift giving or personal nostalgia!</p>
+              <a href="#" class="custom-buy-button">Buy Now <strong>$PRICE</strong></a>
+            </article>
 
-        <article class="product reveal" data-cat="seasonal">
-          <div class="product-photo"><span class="tag">SPRING</span><img src="assets/logo-mark.png" alt=""><small>Product photo</small></div>
-          <h3>Cherry Blossom</h3>
-          <p class="notes">floral &middot; fresh &middot; cherry blossom petals</p>
-          <p class="desc">Delicate, floral, sweet</p>
-          <div class="bundle-grid">
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-3-pack-bundle-003/" class="bundle-option"><span>Large &middot; 3 Pack</span>$60.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-5-pack-bundle-002/" class="bundle-option"><span>Large &middot; 5 Pack</span>$100.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-10-pack-bundle-001/" class="bundle-option"><span>Large &middot; 10 Pack</span>$200.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-3-pack-bundle-009/" class="bundle-option"><span>Medium &middot; 3 Pack</span>$50.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-5-pack-bundle-008/" class="bundle-option"><span>Medium &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-10-pack-bundle-007/" class="bundle-option"><span>Medium &middot; 10 Pack</span>$175.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-3-pack-bundle-015/" class="bundle-option"><span>Small &middot; 3 Pack</span>$45.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-5-pack-bundle-014/" class="bundle-option"><span>Small &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-10-pack-bundle-013/" class="bundle-option"><span>Small &middot; 10 Pack</span>$150.00</a>
-          </div>
-        </article>
+            <article class="custom-product reveal">
+              <div class="custom-product-photo">
+                <img src="assets/logo-mark.png" alt="Customizable scent 25-pack">
+              </div>
+              <h3>25 Pack Custom Scent</h3>
+              <p>Turn any scent into a custom scent pack for gift giving or personal nostalgia!</p>
+              <a href="#" class="custom-buy-button">Buy Now<strong>$PIRCE</strong></a>
+            </article>
 
-        <article class="product reveal" data-cat="gifts">
-          <div class="product-photo"><span class="tag">SUMMER</span><img src="assets/logo-mark.png" alt=""><small>Product photo</small></div>
-          <h3>The Mini Trio</h3>
-          <p class="notes">pineapple &middot; coconut &middot; rum</p>
-          <p class="desc">A bright, creamy, tropical escape.</p>
-          <div class="bundle-grid">
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-3-pack-bundle-003/" class="bundle-option"><span>Large &middot; 3 Pack</span>$60.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-5-pack-bundle-002/" class="bundle-option"><span>Large &middot; 5 Pack</span>$100.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/large-signature-scent-10-pack-bundle-001/" class="bundle-option"><span>Large &middot; 10 Pack</span>$200.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-3-pack-bundle-009/" class="bundle-option"><span>Medium &middot; 3 Pack</span>$50.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-5-pack-bundle-008/" class="bundle-option"><span>Medium &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-10-pack-bundle-007/" class="bundle-option"><span>Medium &middot; 10 Pack</span>$175.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-3-pack-bundle-015/" class="bundle-option"><span>Small &middot; 3 Pack</span>$45.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-5-pack-bundle-014/" class="bundle-option"><span>Small &middot; 5 Pack</span>$80.00</a>
-            <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/small-signature-scent-10-pack-bundle-013/" class="bundle-option"><span>Small &middot; 10 Pack</span>$150.00</a>
-          </div>
-        </article>
-      </div>
+            <article class="custom-product reveal">
+              <div class="custom-product-photo">
+                <img src="assets/logo-mark.png" alt="Customizable scent 100-pack">
+              </div>
+              <h3>100 Pack Custom Scent</h3>
+              <p>Turn any scent into a custom scent pack for gift giving or personal nostalgia!</p>
+              <a href="#" class="custom-buy-button">Buy Now<strong>$PRICE</strong></a>
+            </article>
 
-      <!-- cusotmizable scents -->
-      <section>
-        <div class="custom-scent-copy">
-          <span class="eyebrow">Make your own scent!</span>
-          <h2>Customizable Scents</h2>
-          <p>Create a scent that's uniquely yours. Turn any fragrance into a personalized candle, for yourself or to give as a gift!</p>
-        </div>
+            <article class="custom-product reveal">
+              <div class="custom-product-photo">
+                <img src="assets/logo-mark.png" alt="1 Year customizable scent subscription">
+              </div>
+              <h3>1 Year Subscription</h3>
+              <p>Receive a 10 pack of your personalized scent as part of a 1 year subscription.</p>
+              <a href="#" class="custom-buy-button">Subscribe <strong>$PRICE</strong></a>
+            </article>
 
-        <div class="custom-bundles">
-          <a href="" class="custom-option">
-            <span>10 Pack</span>
-            <strong>$</strong>
-          </a>
-          <a href="" class="custom-option">
-            <span>25 Pack</span>
-            <strong>$</strong>
-          </a>
-          <a href="" class="custom-option">
-            <span>100 Pack</span>
-            <strong>$</strong>
-          </a>
-        </div>
-        <div class="subscription">
-          <div>
-            <span class="eyebrow">Special Offer</span>
-            <h3>1-Year Subscription</h3>
-            <a href="" class="custom-option subscription-option">
-              <p>10 Pack &middot; 1 Year</p>
-              <strong>$</strong>
-            </a>
           </div>
-        </div>
-      </section>
+        </section>
 
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
+      
       <div class="footer-brand">
-        <a href="index.html"><img src="assets/logo-wordmark-light.png" alt="Scentimental"></a>
+        <a href="index.html">
+          <img src="assets/logo-wordmark-light.png" alt="Scentimental">
+        </a>
       </div>
+
       <div>
         <h4>Explore</h4>
-        <ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="team.html">Our Team</a></li><li><a href="newsletter.html">Newsletter</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
+
       <div>
         <h4>Visit</h4>
         <address>
@@ -273,12 +166,21 @@
           <a href="mailto:scentimental.ny@gmail.com">scentimental.ny@gmail.com</a>
         </address>
       </div>
+
       <div>
         <h4>Follow</h4>
-        <div class="socials"><a href="https://www.instagram.com/scentimental_ve/" target="_blank" rel="noopener" aria-label="Scentimental on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Scentimental on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8H6v4h3v12h5V12h3.6l.4-4h-4V6.3c0-1 .2-1.3 1.1-1.3H18V0h-3.8C10.6 0 9 1.6 9 4.6V8z"/></svg></a><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="Scentimental on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 01-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 01-5.2 1.7 2.9 2.9 0 013.2-4.5V9.4a6.3 6.3 0 00-5.4 10.7 6.3 6.3 0 0010.8-4.4V8.7a8.2 8.2 0 004.8 1.5V6.8a4.8 4.8 0 01-1-.1z"/></svg></a></div>
-        <p style="margin:1rem 0 0"><a href="https://www.instagram.com/scentimental_ve/" target="_blank" rel="noopener">@scentimental_ve</a></p>
+        <div class="socials">
+          <a href="https://www.instagram.com/scentimental_ve/" target="_blank" rel="noopener" aria-label="Scentimental on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a>
+          <a href="https://www.facebook.com/scentimental_ve/" target="_blank" rel="noopener" aria-label="Scentimental on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8H6v4h3v12h5V12h3.6l.4-4h-4V6.3c0-1 .2-1.3 1.1-1.3H18V0h-3.8C10.6 0 9 1.6 9 4.6V8z"/></svg></a>
+          <a href="https://www.tiktok.com/scentimental_ve/" target="_blank" rel="noopener" aria-label="Scentimental on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 01-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 01-5.2 1.7 2.9 2.9 0 013.2-4.5V9.4a6.3 6.3 0 00-5.4 10.7 6.3 6.3 0 0010.8-4.4V8.7a8.2 8.2 0 004.8 1.5V6.8a4.8 4.8 0 01-1-.1z"/></svg></a>
+        </div>
+        <p style="margin:1rem 0 0">
+          <a href="https://www.instagram.com/scentimental_ve/" target="_blank" rel="noopener">@scentimental_ve</a>
+        </p>
       </div>
+
     </div>
+
     <div class="footer-base">
       <div class="wrap">
         <span>&copy; <span data-year>2026</span> Scentimental. All rights reserved.</span>
