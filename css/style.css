@@ -924,7 +924,6 @@ a { color: inherit; }
 @media (max-width: 600px) {
   body { font-size: 1.12rem; }
   .products { grid-template-columns: 1fr 1fr; gap: 1.6rem .9rem; }
-  .product .desc { display: none; }
   .product h3 { font-size: .82rem; }
   .people,
   .people--3,
@@ -1358,21 +1357,24 @@ a { color: inherit; }
 }
 @media(max-width: 600px){
   .collection-products{
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    max-width: 430px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 2rem 1rem;
+    max-width: 100%;
   }
   .bundle-grid{
-    grid-template-columns: repeat(3, minmax(0,1fr));
-  }
-  .bundle-option{
-    min-height:55px;
+    grid-template-columns: repeat(2, minmax(0,1fr));
   }
   .bundle-option span{
-    font-size: .55rem;
+    font-size: .52rem;
   }
-  .collection-title{
-    margin-bottom: 1.8rem;
+  .collection-products .product h3{
+    font-size: .78rem;
+    letter-spacing: .08em;
+  }
+  .collection-products, .product .notes, .collection-products .product .desc{
+    font-size: .95rem;
+  }
+  .shop-collection{
+    margin-bottom: 4rem;
   }
 }

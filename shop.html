@@ -1,4 +1,8 @@
+<!-- to do -->
 <!-- facebook and tijtok link get it from amrit/samaira -->
+<!-- make it look prettyier like before -->
+<!-- make buttons drop down to take up less room -->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -99,7 +103,6 @@
                 <img src="assets/logo-mark.png" alt="Customizable scent 10 pack">
               </div>
               <h3>10 Pack Customizable Scent</h3>
-              <p>Turn any scent into a custom scent pack for gift giving or personal nostalgia!</p>
               <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/customizable-scent-10-pack-020/" class="custom-buy-button">Buy Now <strong>$500.00</strong></a>
             </article>
 
@@ -108,7 +111,6 @@
                 <img src="assets/logo-mark.png" alt="Customizable scent 25-pack">
               </div>
               <h3>25 Pack Customizable Scent</h3>
-              <p>Turn any scent into a custom scent pack for gift giving or personal nostalgia!</p>
               <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/customizable-scent-25-pack-022/" class="custom-buy-button">Buy Now<strong>$1000.00</strong></a>
             </article>
 
@@ -117,7 +119,6 @@
                 <img src="assets/logo-mark.png" alt="Customizable scent 100-pack">
               </div>
               <h3>100 Pack Customizable Scent</h3>
-              <p>Turn any scent into a custom scent pack for gift giving or personal nostalgia!</p>
               <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/customizable-scent-100-pack-023/" class="custom-buy-button">Buy Now<strong>$5000.00</strong></a>
             </article>
 
@@ -126,7 +127,6 @@
                 <img src="assets/logo-mark.png" alt="1 Year customizable scent subscription">
               </div>
               <h3>Customizable Scent 10 Pack 1 Year Subscription</h3>
-              <p>Receive a 10 pack of your personalized scent as part of a 1 year subscription.</p>
               <a href="https://portal.veinternational.org/buybuttons/us0110935/btn/customization-candle-10-pack-1-year-subscription-021/" class="custom-buy-button">Subscribe <strong>$3000.00</strong></a>
             </article>
 
@@ -280,7 +280,7 @@
         name: "Medium · 10 Pack",
         type: "Signature",
         price: "$175.00",
-        url: "hhttps://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-10-pack-bundle-007/"
+        url: "https://portal.veinternational.org/buybuttons/us0110935/btn/medium-signature-scent-10-pack-bundle-007/"
       },
       {
         name: "Large · 3 Pack",
@@ -333,6 +333,7 @@
       },
       {
         name: "Apple Cider Donut",
+        season: "FALL",
         type: "Seasonal",
         notes: "honeycrisp apple · warm cider · cinnamon",
         description: "A crisp, soft, spiced scent",
@@ -340,6 +341,7 @@
       },
       {
         name: "Grandma's Cookies",
+        season: "WINTER",
         type: "Seasonal",
         notes: "warm chocolate · brown sugar",
         description: "A warm, buttery scent",
@@ -347,6 +349,7 @@
       },
       {
         name: "Cherry Blossom",
+        season: "SPRING",
         type: "Seasonal",
         notes: "floral · cherry blossom petals",
         description: "A delicate, flora, sweet, fresh scent",
@@ -354,6 +357,7 @@
       },
       {
         name: "Pina Colada",
+        season: "SUMMER",
         type: "Seasonal",
         notes: "pineapple · coconut · rum",
         description: "A bright, creamy, tropical escape",
@@ -362,13 +366,18 @@
     ];
 
     function createScentCard(scent){
-      const seasonTag = scent.season ? `<span class="tag">${scent.season}</span>` : "";
-      const bundles = bundleOptions.map(bundle => `
-        <a href="${bundle.url}" class="bundle-option">
-          <span>${bundle.name}</span>
-          <strong>${bundle.price}</strong>
-        </a>
-      `).join("");
+      const seasonTag = scent.season 
+        ? `<span class="tag">${scent.season}</span>` 
+        : "";
+
+      const bundles = bundleOptions
+        .filter(bundle => bundle.type === scent.type)
+        .map(bundle => `
+          <a href="${bundle.url}" class="bundle-option">
+            <span>${bundle.name}</span>
+            <strong>${bundle.price}</strong>
+          </a>
+        `).join("");
 
       return `
         <article class="product reveal">
@@ -391,8 +400,20 @@
       `;
     }
 
-    document.getElementById("signature-products").innerHTML = signatureScents.map(createScentCard).join("");
-    document.getElementByID("seasonal-products").innerHTML = seasonalScents.map(createScentCard).join("");
+    document.getElementById("signature-products").innerHTML =
+      scents
+        .filter(scent => scent.type === "Signature")
+        .map(createScentCard)
+        .join("");
+
+    document.getElementById("seasonal-products").innerHTML = 
+      scents
+        .filter(scent => scent.type === "Seasonal")
+        .map(createScentCard)
+        .join("");
+    document.querySelectorAll(".shop-section .reveal").forEach(card => {
+      card.classList.add("in");
+    });
   </script>
 
   <script src="js/main.js"></script>
