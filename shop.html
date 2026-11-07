@@ -1,6 +1,3 @@
-<!-- add product imagfes -->
-<!-- make each size/amt into a drop down -->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -368,15 +365,6 @@
         ? `<span class="tag">${scent.season}</span>` 
         : "";
 
-      const bundles = bundleOptions
-        .filter(bundle => bundle.type === scent.type)
-        .map(bundle => `
-          <a href="${bundle.url}" class="bundle-option">
-            <span>${bundle.name}</span>
-            <strong>${bundle.price}</strong>
-          </a>
-        `).join("");
-
       return `
         <article class="product reveal">
           <div class="product-photo">
@@ -390,12 +378,71 @@
           
           <div class="bundle-options">
             <p class="bundle-heading">Choose Your Bundle</p>
-            <div class="bundle-grid">
-              ${bundles}
+
+            <div class="bundle-selectors">
+              <label>
+                <span>Size</span>
+                <select class="bundle-size" aria-label="Choose candle size">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
+                </select>
+              </label>
+
+              <label>
+                <span>Amount</span>
+                <select class="bundle-amount" aria-label="Choose pack amount">
+                  <option value="3">3 Pack</option>
+                  <option value="5">5 Pack</option>
+                  <option value="10">10 Pack</option>
+                </select>
+              </label>
             </div>
+
+            <a class="btn bundle-buy-button" href="#" target="_blank" rel="noopener">
+              Buy Now · <strong></strong>
+            </a>
           </div>
         </article>
       `;
+    }
+
+    function updateBundleButton(card, scentType){
+      const size = card.querySelector(".bundle-size").value;
+      const amount = card.querySelector(".bundle-amount").value;
+
+      const selectedBundle=bundleOptions.find(bundle => 
+        bundle.type === scentType &&
+        bundle.name === `${size} · ${amount} Pack`
+      );
+
+      const buyButton = card.querySelector(".bundle-buy-button");
+      const price = buyButton.querySelector("strong");
+
+      if(selectedBundle){
+        buyButton.href = selectedBundle.url;
+        price.textContent = selectedBundle.price;
+      }
+    }
+
+    function setupBundleSelectors(){
+      document.querySelectorAll("#signature-products .product").forEach(card => {
+        const sizeSelect = card.querySelector(".bundle-size");
+        const amountSelect = card.querySelector(".bundle-amount");
+        const update = () => updateBundleButton(card, "Signature");
+        sizeSelect.addEventListener("change", update);
+        amountSelect.addEventListener("change", update);
+        update();
+      });
+      
+      document.querySelectorAll("#seasonal-products .product").forEach(card => {
+        const sizeSelect = card.querySelector(".bundle-size");
+        const amountSelect = card.querySelector(".bundle-amount");
+        const update =() => updateBundleButton(card, "Seasonal");
+        sizeSelect.addEventListener("change", update);
+        amountSelect.addEventListener("change", update);
+        update();
+      });
     }
 
     document.getElementById("signature-products").innerHTML =
@@ -409,6 +456,9 @@
         .filter(scent => scent.type === "Seasonal")
         .map(createScentCard)
         .join("");
+
+    setupBundleSelectors();
+
     document.querySelectorAll(".shop-section .reveal").forEach(card => {
       card.classList.add("in");
     });
