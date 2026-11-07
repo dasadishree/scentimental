@@ -92,7 +92,6 @@ a { color: inherit; }
   font-style: italic;
 }
 
-/* the ruled line + gold diamond under titles, borrowed from the tagline rules */
 .rule {
   display: flex;
   align-items: center;
@@ -231,8 +230,8 @@ a { color: inherit; }
   transition: transform .3s, opacity .3s;
 }
 
-/* smoke curling out from under the navbar */
-.smoke {
+/* smoke */
+.smoke { 
   position: absolute;
   left: 0;
   right: 0;
@@ -573,7 +572,7 @@ a { color: inherit; }
   max-width: 1040px;
   margin: 0 auto;
   background:
-    radial-gradient(ellipse at 50% 45%, rgba(252, 247, 241, .85), transparent 65%),
+    radial-gradient(ellipse at 50% 5%, rgba(252, 247, 241, .85), transparent 45%),
     linear-gradient(160deg, var(--sand), var(--mauve-soft));
   display: grid;
   place-items: center;
@@ -581,7 +580,6 @@ a { color: inherit; }
   outline: 1px solid rgba(169, 131, 31, .5);
   outline-offset: 10px;
 }
-.group-photo img { width: 70px; opacity: .4; margin: 0 auto .8rem; }
 .group-photo span {
   font-family: var(--caps);
   font-size: .72rem;
@@ -782,17 +780,28 @@ a { color: inherit; }
 
 .contact-media { display: grid; gap: 1.4rem; }
 .school-photo {
+  width: 100%;
   aspect-ratio: 16 / 10;
-  background:
-    radial-gradient(ellipse at 50% 45%, rgba(252, 247, 241, .85), transparent 65%),
-    linear-gradient(160deg, var(--mauve-soft), var(--sand));
+  background: none;
+  overflow: hidden;  
   display: grid;
   place-items: center;
   text-align: center;
   outline: 1px solid rgba(169, 131, 31, .5);
   outline-offset: 8px;
 }
-.school-photo img { width: 54px; opacity: .4; margin: 0 auto .7rem; }
+.school-photo > div{
+  width: 100%;
+  height: 100%;
+}
+.school-photo img {
+  display: block;
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  margin: 0;
+}
 .school-photo span {
   font-family: var(--caps);
   font-size: .68rem;
