@@ -33,19 +33,6 @@ document.querySelectorAll('[data-scroll]').forEach((btn) => {
   });
 });
 
-// Shop filters
-const filterBtns = document.querySelectorAll('.filters button');
-filterBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach((b) => b.setAttribute('aria-pressed', b === btn));
-    const want = btn.dataset.filter;
-    document.querySelectorAll('.product[data-cat]').forEach((card) => {
-      card.hidden = want !== 'all' && !card.dataset.cat.split(' ').includes(want);
-    });
-  });
-});
-
-// Keep the footer year current
 document.querySelectorAll('[data-year]').forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
