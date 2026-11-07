@@ -1050,6 +1050,26 @@ a { color: inherit; }
   transform: translateY(-4px);
   opacity: .9;
 }
+.products .product-photo{
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: var(--sand-soft);
+  overflow: hidden;
+}
+
+.products .product-photo img{
+  display: block;
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  opacity: .8;
+  transition: transform .6s, opacity .6s;
+}
+
+.products .product:hover .product-photo img{
+  transform: translateY(-4px);
+  opacity: .9;
+}
 
 .product-photo .tag{
   z-index: 1;
