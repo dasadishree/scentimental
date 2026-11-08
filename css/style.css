@@ -230,45 +230,34 @@ a { color: inherit; }
   transition: transform .3s, opacity .3s;
 }
 
-/* smoke */
-.smoke { 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  height: 150px;
-  overflow: hidden;
-  pointer-events: none;
-}
-.smoke svg {
-  position: absolute;
-  top: -30px;
-  left: -10%;
-  width: 120%;
-  height: 190px;
-  animation: drift 26s ease-in-out infinite alternate;
-}
-.smoke svg + svg {
-  animation-duration: 34s;
-  animation-direction: alternate-reverse;
-  opacity: .7;
-}
-@keyframes drift {
-  from { transform: translateX(-3%) scaleY(1); }
-  to   { transform: translateX(3%)  scaleY(1.12); }
-}
-
 /* ---------- page banner (inner pages) ---------- */
 
 .page-banner {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #f1e5dc;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: clamp(5rem, 10vw, 7.5rem) var(--gutter) clamp(3rem, 6vw, 4.5rem);
-  background:
-    radial-gradient(ellipse at 15% 0%, rgba(164, 103, 135, .22), transparent 55%),
-    radial-gradient(ellipse at 90% 100%, rgba(217, 175, 59, .18), transparent 50%),
-    var(--sand-soft);
-  border-bottom: 1px solid rgba(169, 131, 31, .3);
+  padding: 3.5rem 1.5rem;
+}
+.page-banner::before{
+  content: "";
+  position: absolute;
+  inset: -12px;
+  z-index: -1;
+  background-image: url("../assets/banner.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(7px);
+}
+.page-banner h1, .page-banner h2, .page-banner .rule{
+  position: relative;
+  z-index: 1;
 }
 .page-banner p {
   max-width: 560px;
@@ -884,7 +873,6 @@ a { color: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .smoke svg { animation: none; }
   html { scroll-behavior: auto; }
 }
 
