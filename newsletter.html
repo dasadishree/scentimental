@@ -57,66 +57,29 @@
 
     <section class="section">
       <div class="wrap">
-        <div class="issues">
-        <article class="issue reveal">
-          <div class="issue-cover">
-            <div class="masthead"><img src="assets/logo-wordmark.png" alt="Scentimental"></div>
-            <div class="vol"><span>Vol. 1 &middot; No. 01</span><span>September 2026</span></div>
-            <div class="art"><span>Newsletter cover</span></div>
+        <div class="zine-section reveal">
+          <div class="zine-heading">
+            <p class="eyebrow">THE SCENTIMENTAL JOURNAL</p>
+            <h2>Flip through our latest news</h2>
           </div>
-          <h3>Issue No. 01</h3>
-          <p>September 2026</p>
-        </article>
-        <article class="issue reveal">
-          <div class="issue-cover">
-            <div class="masthead"><img src="assets/logo-wordmark.png" alt="Scentimental"></div>
-            <div class="vol"><span>Vol. 1 &middot; No. 02</span><span>October 2026</span></div>
-            <div class="art"><span>Newsletter cover</span></div>
+          <div class="zine-status" id="zine-status">
+            Loading newsletter...
           </div>
-          <h3>Issue No. 02</h3>
-          <p>October 2026</p>
-        </article>
-        <article class="issue reveal">
-          <div class="issue-cover">
-            <div class="masthead"><img src="assets/logo-wordmark.png" alt="Scentimental"></div>
-            <div class="vol"><span>Vol. 1 &middot; No. 03</span><span>November 2026</span></div>
-            <div class="art"><span>Newsletter cover</span></div>
+          <div class="zine-viewer" id="zine-viewer">
+            <div class="zine-book" id="zine-book"></div>
           </div>
-          <h3>Issue No. 03</h3>
-          <p>November 2026</p>
-        </article>
-        <article class="issue reveal">
-          <div class="issue-cover">
-            <div class="masthead"><img src="assets/logo-wordmark.png" alt="Scentimental"></div>
-            <div class="vol"><span>Vol. 1 &middot; No. 04</span><span>December 2026</span></div>
-            <div class="art"><span>Newsletter cover</span></div>
+          <div class="zine-controls" id="zine-controls" hidden>
+            <button class="zine-arrow" id="zine-prev" aria-label="Previous page">
+              &#8592;
+            </button>
+            <span class="zine-page-count" id="zine-page-count">
+              Page 1
+            </span>
+            <button class="zine-arrow" id="zine-next" aria-label="Next page">
+              &#8594;
+            </button>
           </div>
-          <h3>Issue No. 04</h3>
-          <p>December 2026</p>
-        </article>
-        <article class="issue reveal">
-          <div class="issue-cover">
-            <div class="masthead"><img src="assets/logo-wordmark.png" alt="Scentimental"></div>
-            <div class="vol"><span>Vol. 1 &middot; No. 05</span><span>January 2027</span></div>
-            <div class="art"><span>Newsletter cover</span></div>
-          </div>
-          <h3>Issue No. 05</h3>
-          <p>January 2027</p>
-        </article>
-        <article class="issue reveal">
-          <div class="issue-cover">
-            <div class="masthead"><img src="assets/logo-wordmark.png" alt="Scentimental"></div>
-            <div class="vol"><span>Vol. 1 &middot; No. 06</span><span>February 2027</span></div>
-            <div class="art"><span>Newsletter cover</span></div>
-          </div>
-          <h3>Issue No. 06</h3>
-          <p>February 2027</p>
-        </article>
-        </div>
-        <div class="coming-soon reveal">
-          <div class="rule"><span></span></div>
-          <h2 class="script-title">More coming soon</h2>
-        </div>
+          <p class="zine-hint">Click the corners or drag a page to flip through.</p>
       </div>
     </section>
 
@@ -157,6 +120,9 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="js/newsletter.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
